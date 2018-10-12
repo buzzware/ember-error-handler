@@ -1,6 +1,12 @@
-import {defineError} from 'ember-exex/error';
+//import {defineError} from 'ember-exex/error';
 
-export const EmberErrorHandlerError = defineError({
+const EmberErrorHandlerError = defineError({
     name: 'ErrorHandlerError',
     message: 'Error in ember-error-handler'
 });
+
+EmberErrorHandlerError.prototype = Object.create(Error.prototype);
+EmberErrorHandlerError.prototype.constructor = EmberErrorHandlerError;
+EmberErrorHandlerError.prototype.superclass = Error;
+
+export EmberErrorHandlerError;
