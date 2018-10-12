@@ -41,8 +41,9 @@
     "exception"
   ],
   "dependencies": {
+    "ember-cli-babel": "~6.12.0",
     "ember-cli-htmlbars": "~2.0.3",
-    "ember-cli-babel": "~6.12.0"
+    "ts-error": "^1.0.3"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"

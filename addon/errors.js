@@ -1,12 +1,9 @@
-//import {defineError} from 'ember-exex/error';
+import {ExtendableError} from 'ts-error/error';
 
-const EmberErrorHandlerError = defineError({
-    name: 'ErrorHandlerError',
-    message: 'Error in ember-error-handler'
-});
+class EmberErrorHandlerError extends ExtendableError {
+    constructor(message) {
+        super(message || 'Error in ember-error-handler');
+    }
+}
 
-EmberErrorHandlerError.prototype = Object.create(Error.prototype);
-EmberErrorHandlerError.prototype.constructor = EmberErrorHandlerError;
-EmberErrorHandlerError.prototype.superclass = Error;
-
-export EmberErrorHandlerError;
+export { EmberErrorHandlerError };
