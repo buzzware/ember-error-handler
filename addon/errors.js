@@ -1,4 +1,4 @@
-import {ExtendableError} from 'ts-error/error';
+import {ExtendableError} from 'ts-error/lib/es';
 
 class EmberErrorHandlerError extends ExtendableError {
     constructor(message) {
